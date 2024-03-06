@@ -1,5 +1,22 @@
 /* Estilo para los 6 textos */
-.metricas {
+header {
     
 
 }
+
+BODY {color:yellowgreen 
+
+}
+
+P {color:purple; 
+   font-size:20px;
+   font-family:Courier;
+   font-weight:bold;
+   font-style:sans-serif;
+   line-height:30px;
+   letter-spacing:5px;
+   text-decoration:underline;
+   text-align:left;
+   text-indent:30px;
+   
+  }
