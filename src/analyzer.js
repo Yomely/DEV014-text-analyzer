@@ -26,7 +26,7 @@ const analyzer = {
     //Crear un conjunto de signos de puntuación
     const signpuntuacion = [".", ",", ";", ":", '"', "'", "!", "¡", "?", "¿", "-", "_", "(", ")", "{", "}", "[", "]"];
     let textosinespaciosss = "";
-    let contadortexto = "";
+    let contadortexto = 0;
     for (let i = 0; i < textosinespacios.length; i++) {  //Esta parte elimina los signos de puntuación
       if(!signpuntuacion.includes(textosinespacios[i])) {  //si el carácter actual en la posición i de textoSinEspacios[i] no está incluido en el conjunto de signos de puntuación
         textosinespaciosss = textosinespacios.slice(0, i) + textosinespacios.slice(i + 1);   //Elimina un caracter especifico de la cadena textosinespacios y asignando una nueva cadena sin ese caracter especifico.
@@ -42,15 +42,23 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     let contador = 0;
     const numeros = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];  //Declarando los digitos del 0 al 9
-    for (let i = 0; i < text.length; i++){    //Bucle para recorrer cada caracter del texto
-      if(numeros.includes(text[i])){   //Yomely aquí verificas si el caracter es un número
-        contador++;  //Incremento del contador si este es un número
+    for (let i = 0; i < text.length; i++){     //Bucle para recorrer cada caracter del texto
+      if(numeros.includes(text[i])){           //Yomely aquí verificas si el caracter es un número
+        contador++;                            //Incremento del contador si este es un número
       }
     }
-    return contador;  //Devolver el recuento de cuántos números hay en el texto
+    return contador;                           //Devolver el recuento de cuántos números hay en el texto
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    const numero = 0;
+    let suma = 0;
+    for (let i = 0; i < text.length; i++){    //Bucle para recorrer cada caracter del texto
+      if(text[i] >= '0' && text[i] <= '9'){   //Yomely aquí verificas si el caracter es un número
+        suma += numero(text[i]);                      //Convertir el caracter a número y adicionarlo a la suma total
+      }
+    }
+    return suma;                              //Devolver la suma total de todos los número que hay en el texto.
   },
 };
 
