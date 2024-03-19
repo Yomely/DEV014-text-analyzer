@@ -8,7 +8,7 @@ const caracteresSinEspacios = document.querySelector("li[data-testid=character-n
 const numeros = document.querySelector("li[data-testid=number-count]");
 const suma = document.querySelector("li[data-testid=number-sum]");
 const longitudMedia = document.querySelector("li[data-testid=word-length-average]");
-const button = document.querySelector("reset-button");
+const button = document.getElementById("reset-button");
 
 cajaTexto.addEventListener("input", function () {
   palabra.innerHTML = "Cantidad de palabras: " + analyzer.getWordCount(cajaTexto.value);
@@ -22,11 +22,5 @@ cajaTexto.addEventListener("input", function () {
 
 button.addEventListener('click', function ()  {
   cajaTexto.value = '';
-  palabra.innerHTML = 0;
-  caracteres.innerHTML = 0;
-  caracteresSinEspacios.innerHTML = 0;
-  numeros.innerHTML = 0;
-  suma.innerHTML = 0;
-  longitudMedia.innerHTML = 0;
 }
 )

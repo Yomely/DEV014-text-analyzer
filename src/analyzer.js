@@ -6,10 +6,11 @@ const analyzer = {
     let contadorpalabras = 0;                          //Es una variable local para ver sólo en está función y la vamos a utilizar para indicar 
     for (let i = 0; i < arregpalabras.length; i++) {
       const ultimocaracter = arregpalabras[i].slice(-1)
+      let nuevogrupo = arregpalabras[i];
       if (arregpalabras[i].slice(-1) === '.') {
-        return ultimocaracter;
+        nuevogrupo  = arregpalabras[i].slice(0, ultimocaracter);
       }
-      if(isNaN(arregpalabras [i])) {
+      if(isNaN(nuevogrupo)) {
         contadorpalabras = contadorpalabras + 0;
       } else {
         contadorpalabras = contadorpalabras + 1;
