@@ -3,20 +3,7 @@ const analyzer = {
   getWordCount: (text) => {
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
     const arregpalabras = text.trim().split(" ");      //Elimina los espacios del principio y fin, después divide el texto usando split(' ')
-    let contadorpalabras = 0;                          //Es una variable local para ver sólo en está función y la vamos a utilizar para indicar 
-    for (let i = 0; i < arregpalabras.length; i++) {
-      const ultimocaracter = arregpalabras[i].slice(-1)
-      let nuevogrupo = arregpalabras[i];
-      if (arregpalabras[i].slice(-1) === '.') {
-        nuevogrupo  = arregpalabras[i].slice(0, ultimocaracter);
-      }
-      if(isNaN(nuevogrupo)) {
-        contadorpalabras = contadorpalabras + 0;
-      } else {
-        contadorpalabras = contadorpalabras + 1;
-      }
-    }
-    return contadorpalabras;
+    return arregpalabras.length;
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
@@ -52,7 +39,7 @@ const analyzer = {
     }
     const longitudmedia = totalcaracteres / palab.length;        //Calculando la longitud media
     const longitudmediaredondeada = longitudmedia.toFixed(2);    //La redondeamos a sólo 2 digitos después del punto.
-    return longitudmediaredondeada;
+    return parseFloat(longitudmediaredondeada);
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
@@ -61,11 +48,11 @@ const analyzer = {
   
     // Recorrer cada carácter del texto
     for (let i = 0; i < arregpalabras.length; i++) {
-      const ultimocaracter = arregpalabras[i].slice(-1);
-      if(arregpalabras[i].slice(-1) === '.') {
-        return ultimocaracter;
+      let grupo = arregpalabras[i];
+      if(grupo.slice(-1) === '.') {
+        grupo = grupo.slice(0, -1);
       }
-      if(isNaN(arregpalabras[i])) {
+      if(isNaN(grupo)) {
         contador = contador + 0;
       } else {
         contador = contador + 1;
@@ -78,11 +65,15 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    const arregtexto = text.split(" ");           //Declarando y Transformando a un arreglo
+    const arregpalabras = text.split(" ");           //Declarando y Transformando a un arreglo
     let suma = 0;
-    for (let i = 0; i < arregtexto.length; i++) {    //Bucle para recorrer cada caracter del texto
-      if (!isNaN(Number(arregtexto[i]))) {     //Convertir el caracter a número y adicionarlo a la suma total
-        suma += Number(arregtexto[i]);
+    for (let i = 0; i < arregpalabras.length; i++) {   
+      let grupo = arregpalabras[i];
+      if(grupo.slice(-1) === '.') {
+        grupo = grupo.slice(0, -1);
+      } 
+      if (!isNaN(Number(grupo))) {     //Convertir el caracter a número y adicionarlo a la suma total
+        suma += Number(grupo);
       }                             
     }
     return suma;                                 //Devolver la suma total de todos los número que hay en el texto.

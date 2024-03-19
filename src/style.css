@@ -3,10 +3,13 @@ html {
    background-color: #d9a1a1;
 }
 
+header {
+   color: #d7e2ca;
+}
+
 h1 {
    font-size: 60px;
    font-family: Arial, Helvetica, sans-serif;
-   color: #d7e2ca;
    text-align: center;
    display: block;
 }
@@ -47,7 +50,11 @@ textarea[name="user-input"] {
    height: 50px;
 }
 
-P {color: #d7e2ca; 
+footer {
+   color: #d7e2ca; 
+}
+
+P {
    font-size:20px;
    font-family: Arial, Helvetica, sans-serif;
    text-align:center;
