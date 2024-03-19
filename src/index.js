@@ -20,12 +20,13 @@ cajaTexto.addEventListener("input", function () {
 
 });
 
-button.addEventListener("click", function () {
-  cajaTexto.value = " ";
+button.addEventListener('click', function ()  {
+  cajaTexto.value = '';
   palabra.innerHTML = 0;
   caracteres.innerHTML = 0;
   caracteresSinEspacios.innerHTML = 0;
   numeros.innerHTML = 0;
-
-
-})
+  suma.innerHTML = 0;
+  longitudMedia.innerHTML = 0;
+}
+)

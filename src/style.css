@@ -1,22 +1,54 @@
 /* Estilo para los 6 textos */
-header {
-    
-
+html {
+   background-color: #d9a1a1;
 }
 
-BODY {color:yellowgreen 
-
+h1 {
+   font-size: 60px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #d7e2ca;
+   text-align: center;
+   display: block;
 }
 
-P {color:purple; 
+textarea[name="user-input"] {
+   background-color: #d7e2ca;
+   border: 1px solid #f4bfbf;
+   border-radius: 10px;
+   margin-top: 20px;
+   display: block;
+   margin: 10px;
+   width: 500px; 
+   height: 200px; 
+   margin: 0 auto; 
+   display: block; 
+   text-align: center;
+}
+
+.li {
+   display: inline-block;
+   color: #333333;
+   border: 2px solid #d7e2ca;
+   background-color: #f4bfbf;
+   padding: 12px;
+   border-radius: 5px;
+   margin: 10px;
+   margin-bottom: 0 auto;
+}
+
+#reset-button {
+   border: none;
+   color: #333333;
+   background-color: aqua;
+   border-radius: 10px;
+   display: block;
+   margin: 0 auto;
+   width: 150px;
+   height: 50px;
+}
+
+P {color: #d7e2ca; 
    font-size:20px;
-   font-family:Courier;
-   font-weight:bold;
-   font-style:sans-serif;
-   line-height:30px;
-   letter-spacing:5px;
-   text-decoration:underline;
-   text-align:left;
-   text-indent:30px;
-   
+   font-family: Arial, Helvetica, sans-serif;
+   text-align:center;
   }
